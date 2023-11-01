@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/border_edt"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tv_madonhang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đơn hàng #1234"
+        android:textColor="@color/black"
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:textSize="27sp" />
+
+    <TextView
+        android:id="@+id/tv_chitiet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginEnd="20dp"
+        android:text="chi tiết &gt;" />
+</LinearLayout>

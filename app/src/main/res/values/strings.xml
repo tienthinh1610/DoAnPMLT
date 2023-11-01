@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NNHBstore</string>
+    <string name="thieunhi"> Sách Thiếu Nhi</string>
+    <string name="vanhoc"> Sách Văn Học</string>
+    <string name="kinhte"> Sách Kinh Tế</string>
+    <string name="tamly"> Sách Tâm Lý</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
