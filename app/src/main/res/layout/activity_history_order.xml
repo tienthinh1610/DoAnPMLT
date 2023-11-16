@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#D6D1B1"
     tools:context=".activity.HistoryOrderActivity">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarhistoryorder"
-        app:titleTextColor="@color/white"
+        app:titleTextColor="#D6D1B1"
         app:titleMarginStart="70dp"
         app:navigationIcon="@drawable/ic_arrow_back_white"
         app:title="Lịch sử mua hàng"
-        android:background="@color/orange"
+        android:background="#40291F"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </androidx.appcompat.widget.Toolbar>

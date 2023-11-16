@@ -3,11 +3,12 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#CCFDF2">
     <androidx.appcompat.widget.Toolbar
         app:titleMarginStart="95dp"
         app:navigationIcon="@drawable/ic_arrow_back_white"
-        android:background="#E64E07"
+        android:background="#0A332A"
         app:titleTextColor="@color/white"
         android:id="@+id/toolbaraddbook"
         android:layout_width="match_parent"
@@ -158,6 +159,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:background="@drawable/border_edt"
+
                 android:hint="Nhập Image 3"
                 android:singleLine="true"
                 android:minHeight="48dp"
@@ -187,7 +189,7 @@
     </ScrollView>
     <Button
         android:id="@+id/btn_addbook"
-        android:backgroundTint="@color/orange"
+        android:backgroundTint="#0A332A"
         android:layout_margin="10dp"
         app:cornerRadius="12dp"
         android:layout_weight="0"

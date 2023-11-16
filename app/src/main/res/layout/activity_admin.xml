@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activityAdmin.AdminActivity">
+    tools:context=".activityAdmin.AdminActivity"
+    android:background="#CCFDF2">
 
     <TextView
         android:onClick="dssp"
@@ -13,12 +14,12 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:textSize="28dp"
-        android:textColor="@color/orange"
+        android:textColor="#0A332A"
         android:textStyle="bold"
         android:textAllCaps="true"
         android:gravity="center"
         android:layout_marginTop="50dp"
-        android:text="Welcome to NNHBstore" />
+        android:text="Welcome to QQQ Store" />
 
     <TextView
         android:id="@+id/textView8"
@@ -33,7 +34,7 @@
         android:onClick="dssp"
         android:padding="10dp"
         android:text="Danh sách sản phẩm"
-        android:textColor="@color/black"
+        android:textColor="#0A332A"
         android:textSize="20dp" />
 
     <TextView
@@ -49,7 +50,7 @@
         android:padding="10dp"
         android:drawableLeft="@drawable/ic_arrow_fright_black"
         android:drawablePadding="20dp"
-        android:textColor="@color/black"
+        android:textColor="#0A332A"
         android:text="Danh sách người dùng" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -59,9 +60,9 @@
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:background="@drawable/radius_btnlogin"
-        android:backgroundTint="@color/orange"
+        android:backgroundTint="#0A332A"
         android:onClick="logout"
         android:padding="15dp"
         android:text="Đăng xuất"
-        android:textColor="@color/white" />
+        android:textColor="#CCFDF2" />
 </LinearLayout>

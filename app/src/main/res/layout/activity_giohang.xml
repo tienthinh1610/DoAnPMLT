@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_margin="10dp"
         android:layout_height="0dp"
-        android:background="#EED9D9"
+        android:background="#D6D1B1"
         android:layout_weight="1" >
     </androidx.recyclerview.widget.RecyclerView>
 

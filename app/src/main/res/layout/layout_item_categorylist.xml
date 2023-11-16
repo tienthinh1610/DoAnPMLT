@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:maxHeight="70dp"
             android:text="Tên Sách"
-            android:textColor="@color/black"
+            android:textColor="#0A332A"
             android:textSize="20dp"/>
         <TextView
             android:id="@+id/tv_pricecl"
@@ -31,6 +31,7 @@
             android:layout_height="wrap_content"
             android:text="Tên Sách"
             android:textColor="@color/red"
+            android:layout_marginTop="5dp"
             android:textStyle="bold"
             android:textSize="17dp" />
     </LinearLayout>

@@ -43,7 +43,6 @@
         android:text="Welcome to QQQ Store"
         android:textColor="#D6D1B1"
         android:textSize="40dp"
-
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageView2"
         app:layout_constraintRight_toRightOf="parent"

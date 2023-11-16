@@ -8,7 +8,7 @@
     tools:context=".activityAdmin.UsersListActivity">
     <androidx.appcompat.widget.Toolbar
         app:titleMarginStart="60dp"
-        android:background="#E64E07"
+        android:background="#0A332A"
         app:navigationIcon="@drawable/ic_arrow_back_white"
         app:titleTextColor="@color/white"
         android:id="@+id/toolbaruserslist"
@@ -20,6 +20,7 @@
         android:layout_marginTop="5dp"
         android:id="@+id/lvuserslist"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="#CCFDF2"/>
 
 </LinearLayout>

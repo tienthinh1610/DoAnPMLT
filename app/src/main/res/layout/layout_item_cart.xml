@@ -20,7 +20,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:textColor="@color/black"
+            android:textColor="#0A332A"
             android:paddingLeft="10dp"
             android:textSize="18dp"
             android:layout_marginTop="5dp"
@@ -47,7 +47,7 @@
             android:paddingLeft="10dp">
             <ImageButton
                 android:id="@+id/btnTru"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="#0A332A"
                 android:contentDescription="Dấu trừ"
                 android:src="@drawable/ic_dautru"
                 android:layout_width="40dp"
@@ -63,7 +63,7 @@
 
             <ImageButton
                 android:id="@+id/btnCong"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="#0A332A"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:contentDescription="Dấu cộng"
