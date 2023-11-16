@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#40291F">
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawer_trangchu"
         android:layout_width="match_parent"
@@ -15,14 +16,14 @@
             android:layout_height="match_parent">
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar_trangchu"
-                android:background="@color/orange"
+                android:background="#40291F"
                 android:layout_width="match_parent"
                 android:layout_height="60dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/akaya_telivigala"
-                    android:textColor="@color/white"
+                    android:textColor="#D6D1B1"
                     android:paddingTop="10dp"
                     android:textSize="30sp"
                     android:textStyle="bold"
@@ -49,6 +50,7 @@
                         android:drawableStart="@drawable/ic_thieunhi"
                         android:textStyle="bold"
                         android:drawablePadding="10dp"
+                        android:textColor="#D6D1B1"
                         android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
@@ -56,13 +58,14 @@
                         android:id="@+id/recyclerViewCategory1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-                    V<TextView
+                    <TextView
                         android:text="@string/vanhoc"
                         android:paddingLeft="10dp"
                         android:textSize="25dp"
                         android:drawableStart="@drawable/ic_vanhoc"
                         android:drawablePadding="10dp"
                         android:textStyle="bold"
+                        android:textColor="#D6D1B1"
                         android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
@@ -77,6 +80,7 @@
                         android:drawableStart="@drawable/ic_kinhte"
                         android:drawablePadding="10dp"
                         android:textStyle="bold"
+                        android:textColor="#D6D1B1"
                         android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
@@ -92,6 +96,7 @@
                         android:drawableStart="@drawable/ic_tamly"
                         android:drawablePadding="10dp"
                         android:textStyle="bold"
+                        android:textColor="#D6D1B1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <androidx.recyclerview.widget.RecyclerView
