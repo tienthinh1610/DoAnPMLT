@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group>
+        <item android:title="Danh mục loại sản phẩm">
+            <menu>
+                <item
+                    android:id="@+id/item_thieunhi"
+                    android:title="@string/thieunhi"/>
+                <item
+                    android:id="@+id/item_vanhoc"
+                    android:title="@string/vanhoc"/>
+                <item
+                    android:id="@+id/item_kinhte"
+                    android:title="@string/kinhte"/>
+                <item
+                    android:id="@+id/item_tamly"
+                    android:title="@string/tamly"/>
+            </menu>
+        </item>
+    </group>
+</menu>

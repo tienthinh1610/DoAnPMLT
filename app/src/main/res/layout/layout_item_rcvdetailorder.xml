@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/border_bottom"
+    android:padding="5dp"
+    android:backgroundTint="@color/white"
+    android:layout_height="100dp">
+
+    <ImageView
+        android:id="@+id/img_itemdetailorder"
+        android:layout_width="120dp"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/bmtd1" />
+
+    <LinearLayout
+        android:layout_width="230dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_namebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="50dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:text="ten sach" />
+
+        <TextView
+            android:id="@+id/tv_pricebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="100.000 VNĐ"
+            android:textColor="@color/red"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="17sp"
+        android:layout_gravity="center_vertical"
+        android:text="x2" />
+
+</LinearLayout>
