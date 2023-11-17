@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#40291F"
+    android:background="#E5FFFF"
     android:contentDescription="@string/app_name"
     tools:context=".activity.OrderDetailActivity">
 
@@ -31,13 +31,13 @@
             android:layout_marginBottom="30dp"
             android:gravity="center"
             android:text="Đơn hàng #123"
-            android:textColor="#D6D1B1"
+            android:textColor="#00899E"
             android:textStyle="bold"
             android:textSize="30dp" />
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:background="#D6D1B1"
+            android:background="#3CA6A6"
             android:layout_marginVertical="1dp"
             android:padding="15dp"
             android:gravity="center_vertical"
@@ -58,7 +58,7 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:background="#D6D1B1"
+            android:background="#A4EDED"
             android:layout_marginVertical="1dp"
             android:padding="15dp"
             android:gravity="center_vertical"
@@ -79,7 +79,7 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:background="#D6D1B1"
+            android:background="#3CA6A6"
             android:layout_marginVertical="1dp"
             android:padding="15dp"
             android:gravity="center_vertical"
@@ -100,7 +100,7 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:background="#D6D1B1"
+            android:background="#A4EDED"
             android:layout_marginVertical="1dp"
             android:padding="15dp"
             android:gravity="center_vertical"
@@ -121,7 +121,7 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:background="#D6D1B1"
+            android:background="#3CA6A6"
             android:layout_marginVertical="1dp"
             android:padding="15dp"
             android:gravity="center_vertical"
@@ -142,7 +142,7 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:background="#D6D1B1"
+            android:background="#A4EDED"
             android:layout_marginVertical="1dp"
             android:padding="15dp"
             android:gravity="center_vertical"

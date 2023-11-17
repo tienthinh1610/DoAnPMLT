@@ -6,20 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".activity.InfoAccountActivity"
     android:orientation="vertical"
-    android:background="#D6D1B1">
+    android:background="#E5FFFF">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarinforaccount"
-        app:titleTextColor="#D6D1B1"
+        app:titleTextColor="#F5FBEF"
         app:titleMarginStart="60dp"
         app:navigationIcon="@drawable/ic_arrow_back_white"
         app:title="Thông tin tài khoản"
-        android:background="#40291F"
+        android:background="#3CA6A6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </androidx.appcompat.widget.Toolbar>
     <TextView
         android:textSize="30dp"
-        android:textColor="#40291F"
+        android:textColor="#3CA6A6"
         android:textStyle="bold"
         android:gravity="center"
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
         android:text="Cập nhật thông tin"/>
     <TextView
         android:textSize="20dp"
-        android:textColor="#40291F"
+        android:textColor="#3CA6A6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -52,7 +52,7 @@
         android:layout_marginEnd="20dp"/>
     <TextView
         android:textSize="20dp"
-        android:textColor="#40291F"
+        android:textColor="#3CA6A6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -77,7 +77,7 @@
         android:padding="10dp" />
     <TextView
         android:textSize="20dp"
-        android:textColor="#40291F"
+        android:textColor="#3CA6A6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -105,9 +105,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="24dp"
-        android:textColor="#D6D1B1"
+        android:textColor="#F5FBEF"
         android:background="@drawable/radius_btnlogin"
-        android:backgroundTint="#40291F"
+        android:backgroundTint="#3CA6A6"
         android:textSize="16sp"
         android:text="Cập nhật"/>
 </LinearLayout>

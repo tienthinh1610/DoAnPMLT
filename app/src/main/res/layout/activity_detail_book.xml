@@ -10,17 +10,17 @@
         android:id="@+id/toolbardetailbook"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#40291F"
-        app:titleMarginStart="30dp"
+        android:background="#3CA6A6"
+        app:titleMarginStart="50dp"
         app:navigationIcon="@drawable/ic_arrow_back_white"
-        app:titleTextColor="#D6D1B1"
+        app:titleTextColor="#F5FBEF"
         app:menu="@menu/menu_datailbook"
         app:title="Thông tin sản phẩm" />
     <ScrollView
         android:layout_weight="2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#D6D1B1">
+        android:background="#E5FFFF">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,9 +37,9 @@
                 android:id="@+id/tv_namebook"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="140dp"
+                android:layout_marginLeft="105dp"
                 android:text="Tên sách"
-                android:textColor="@color/black"
+                android:textColor="#3CA6A6"
                 android:textSize="30dp"
                 android:textStyle="bold" />
 
@@ -48,7 +48,7 @@
                 android:text="100.000 Đ"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="140dp"
+                android:layout_marginLeft="105dp"
                 android:textSize="25dp"
                 android:textColor="@color/red"/>
             <TextView
@@ -87,9 +87,9 @@
             android:id="@+id/btn_addtocart"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:backgroundTint="#40291F"
+            android:backgroundTint="#3CA6A6"
             android:text="Thêm vào giỏ hàng"
-            android:textColor="#D6D1B1"
+            android:textColor="#F5FBEF"
             android:textSize="15sp" />
     </LinearLayout>
 </LinearLayout>

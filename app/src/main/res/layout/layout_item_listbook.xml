@@ -23,7 +23,7 @@
             android:text="Tên sách"
             android:textSize="18dp"
             android:textColor="@color/black"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="5dp"
             android:id="@+id/tv_namebook"/>
         <TextView
             android:id="@+id/tv_pricebook"
@@ -32,7 +32,7 @@
             android:text="giá sách"
             android:textColor="#FF0000"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="5dp"
             android:textSize="16dp"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
