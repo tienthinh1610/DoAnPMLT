@@ -132,7 +132,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:textColor="#D6D1B1"
+            android:textColor="#F5FBEF"
             android:background="@drawable/radius_btnlogin"
             android:backgroundTint="#00899E"
             android:padding="15dp"

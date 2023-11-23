@@ -37,8 +37,9 @@
                 android:id="@+id/tv_namebook"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="105dp"
+                android:layout_margin="5dp"
                 android:text="Tên sách"
+                android:gravity="center"
                 android:textColor="#3CA6A6"
                 android:textSize="30dp"
                 android:textStyle="bold" />
@@ -48,7 +49,8 @@
                 android:text="100.000 Đ"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="105dp"
+                android:layout_margin="5dp"
+                android:gravity="center"
                 android:textSize="25dp"
                 android:textColor="@color/red"/>
             <TextView

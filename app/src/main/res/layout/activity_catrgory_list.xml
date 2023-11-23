@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D6D1B1"
+    android:background="#E5FFFF"
     android:orientation="vertical"
     tools:context=".activity.CategoryListActivity">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarcategorylist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#40291F"
+        android:background="#3CA6A6"
         app:titleMarginStart="80dp"
         app:navigationIcon="@drawable/ic_arrow_back_white"
-        app:titleTextColor="#D6D1B1"
+        app:titleTextColor="#E5FFFF"
         app:title="Sách thiếu nhi" >
     </androidx.appcompat.widget.Toolbar>
     <androidx.recyclerview.widget.RecyclerView

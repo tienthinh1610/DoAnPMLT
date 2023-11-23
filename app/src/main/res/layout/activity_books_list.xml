@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#D6D1B1"
+    android:background="#CCFDF2"
     tools:context=".activityAdmin.BooksListActivity">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarbookslist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#40291F"
+        android:background="#0A332A"
         app:titleMarginStart="60dp"
         app:navigationIcon="@drawable/ic_arrow_back_white"
-        app:titleTextColor="#D6D1B1"
+        app:titleTextColor="@color/white"
         app:title="Danh sách sản phẩm" >
 
         <ImageButton
