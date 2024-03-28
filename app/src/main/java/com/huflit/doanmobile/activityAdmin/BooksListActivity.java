@@ -50,7 +50,7 @@ public class BooksListActivity extends AppCompatActivity {
     private AdapterCateList adapterCateList;
     private ArrayList<Book> bookList = new ArrayList<>();
     private ArrayList<Category> cateList = new ArrayList<>();
-    private Mydatabase mydb;
+    Mydatabase mydb = Mydatabase.getInstance(this);
     private Toolbar toolbar;
     ImageButton btn_add;
     @Override

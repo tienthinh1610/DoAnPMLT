@@ -19,7 +19,8 @@ public class LoginActivity extends AppCompatActivity {
     EditText medt_username,medt_password;
     Button btn_login;
 
-    public  static  Mydatabase mydb;
+    //public  static  Mydatabase mydb;
+    Mydatabase mydb = Mydatabase.getInstance(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

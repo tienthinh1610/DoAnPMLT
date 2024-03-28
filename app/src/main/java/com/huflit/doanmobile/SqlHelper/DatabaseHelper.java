@@ -115,8 +115,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + "FOREIGN KEY(" + COLUMN_ORDER_DETAIL_ORDER_ID + ") REFERENCES " + TABLE_HISTORY_ORDER + "(" + COLUMN_ORDER_ID + "),"
             + "FOREIGN KEY(" + COLUMN_ORDER_DETAIL_BOOK_ID + ") REFERENCES " + TABLE_BOOKS + "(" + COLUMN_BOOK_ID + "));";
 
+    //SingleTon
+    private static DatabaseHelper instance;
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    }
+    public synchronized static DatabaseHelper getInstance(Context context) {
+        if (instance == null) {
+            instance = new DatabaseHelper(context);
+        }
+        return instance;
     }
 
     @Override

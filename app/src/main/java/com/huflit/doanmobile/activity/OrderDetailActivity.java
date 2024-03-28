@@ -28,7 +28,7 @@ public class OrderDetailActivity extends AppCompatActivity {
     TextView tvMaDonHang, tvReceiverName, tvDate, tvReceiverPhone, tvReceiverAddress, tvPaymentMethod, tvTotalPrice;
     RecyclerView rcvOrderDetail;
     Button btnDeleteOrder;
-    Mydatabase mydb;
+    Mydatabase mydb = Mydatabase.getInstance(this);
     int orderId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -20,12 +20,20 @@ import com.huflit.doanmobile.classs.Users;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Mydatabase {
+    private static Mydatabase instance;
     SQLiteDatabase db;
     DatabaseHelper DBhelper;
     public  Mydatabase(Context context){
         DBhelper = new DatabaseHelper(context);
         db = DBhelper.getWritableDatabase();
+    }
+    public static synchronized Mydatabase getInstance(Context context) {
+        if (instance == null) {
+            instance = new Mydatabase(context.getApplicationContext());
+        }
+        return instance;
     }
     //Thêm tài khoản (Đăng Ký)
     public boolean addUserAccout(String username, String password) {
@@ -74,6 +82,7 @@ public class Mydatabase {
     public boolean deleteBook(int bookId) {
         int result = db.delete(DBhelper.TABLE_BOOKS, DBhelper.COLUMN_BOOK_ID + " = ?",
                 new String[]{String.valueOf(bookId)});
+
         return result > 0;
     }
     //Sửa sách
@@ -142,6 +151,22 @@ public class Mydatabase {
         cursor.close();
         return books;
     }
+    //composite
+    public boolean removeBookToCategory(int categoryId, String bookName) {
+        // Tìm danh mục theo categoryId
+        Category category = getCateById(categoryId);
+
+        if (category != null) {
+            // Tạo một đối tượng Book mới
+            Book book = getBookByName(bookName);
+
+            // Thêm sách vào danh sách sách của Category
+            category.remove(book);
+            return true;
+        } else {
+            return false; // Hoặc xử lý tùy ý khi không tìm thấy Category
+        }
+    }
     public boolean addBook(int categoryId, String bookName, int bookPrice, String bookAuthor, String description, String image1, String image2, String image3) {
         ContentValues values = new ContentValues();
         values.put(DatabaseHelper.COLUMN_BOOK_CATEGORY_ID, categoryId);
@@ -156,6 +181,16 @@ public class Mydatabase {
         if (result == -1) {
             return false;
         } else {
+            //return true;
+            // Tạo một đối tượng Book mới
+            Book book = new Book(/* pass parameters */);
+
+            // Thêm sách vào danh sách sách của Category
+            Category category = getCateById(categoryId);
+            if (category != null) {
+                category.add(book);
+            }
+
             return true;
         }
     }
@@ -188,6 +223,34 @@ public class Mydatabase {
                 DatabaseHelper.COLUMN_USER_USERNAME + " = ?", new String[]{username});
 
         return rowsAffected > 0;
+    }
+    public Book getBookByName(String bookName) {
+        String[] columns = {DatabaseHelper.COLUMN_BOOK_ID, DatabaseHelper.COLUMN_BOOK_CATEGORY_ID,
+                DatabaseHelper.COLUMN_BOOK_NAME, DatabaseHelper.COLUMN_BOOK_AUTHOR,
+                DatabaseHelper.COLUMN_BOOK_DESCRIPTION, DatabaseHelper.COLUMN_BOOK_PRICE,
+                DatabaseHelper.COLUMN_BOOK_IMAGE_1, DatabaseHelper.COLUMN_BOOK_IMAGE_2,
+                DatabaseHelper.COLUMN_BOOK_IMAGE_3};
+
+        String selection = DatabaseHelper.COLUMN_BOOK_NAME + " = ?";
+        String[] selectionArgs = {bookName};
+
+        Cursor cursor = db.query(DatabaseHelper.TABLE_BOOKS, columns, selection, selectionArgs, null, null, null);
+
+        if (cursor != null && cursor.moveToFirst()) {
+            int id = cursor.getInt(0);
+            int categoryId = cursor.getInt(1);
+            String name = cursor.getString(2);
+            String author = cursor.getString(3);
+            String description = cursor.getString(4);
+            int price = cursor.getInt(5);
+            String image1 = cursor.getString(6);
+            String image2 = cursor.getString(7);
+            String image3 = cursor.getString(8);
+            cursor.close();
+            return new Book(id, categoryId, name, author, description, price, image1, image2, image3);
+        }
+
+        return null; // Trả về null nếu không tìm thấy sách với tên tương ứng
     }
     public Book getBookById(int bookId) {
 
@@ -227,10 +290,22 @@ public class Mydatabase {
         return userId;
     }
     public boolean addToCart(String username, int bookId, int quantity) {
+        //Prototype Pattern
+        int userId = getUserIdByUsername(username);
+        // Lấy thông tin sách từ bookId
+        Book book = getBookById(bookId);
+        // Tạo một đối tượng Cart từ cơ sở dữ liệu hoặc từ một nguồn khác
+        Cart cartPrototype = new Cart(0, userId, book, quantity);
+        // Tạo một bản sao của đối tượng Cart với quantity mới
+        Cart newCart = cartPrototype.clone(quantity);
+        // Thêm đối tượng Cart mới vào cơ sở dữ liệu
         ContentValues values = new ContentValues();
-        values.put(DatabaseHelper.COLUMN_CART_USER_ID, getUserIdByUsername(username));
-        values.put(DatabaseHelper.COLUMN_CART_BOOK_ID, bookId);
-        values.put(DatabaseHelper.COLUMN_CART_QUANTITY, quantity);
+        //values.put(DatabaseHelper.COLUMN_CART_USER_ID, getUserIdByUsername(username));
+        //values.put(DatabaseHelper.COLUMN_CART_BOOK_ID, bookId);
+        //values.put(DatabaseHelper.COLUMN_CART_QUANTITY, quantity);
+        values.put(DatabaseHelper.COLUMN_CART_USER_ID, newCart.getUserId());
+        values.put(DatabaseHelper.COLUMN_CART_BOOK_ID, newCart.getBook().getId());
+        values.put(DatabaseHelper.COLUMN_CART_QUANTITY, newCart.getQuantity());
 
         long result = db.insert(DatabaseHelper.TABLE_CART, null, values);
         if (result == -1) {
@@ -482,5 +557,21 @@ public class Mydatabase {
         }
         cursor.close();
         return cates;
+    }
+    public Category getCateById(long cateId) {
+        String[] columns = {DatabaseHelper.COLUMN_CATEGORY_ID, DatabaseHelper.COLUMN_CATEGORY_NAME};
+        String selection = DatabaseHelper.COLUMN_CATEGORY_ID + " = ?";
+        String[] selectionArgs = {String.valueOf(cateId)};
+
+        Cursor cursor = db.query(DatabaseHelper.TABLE_CATEGORIES, columns, selection, selectionArgs, null, null, null);
+
+        if (cursor != null && cursor.moveToFirst()) {
+            int cateIds = cursor.getInt(0);
+            String catename = cursor.getString(1);
+            cursor.close();
+            return new Category(cateIds, catename);
+        }
+
+        return null; // Trả về null nếu không tìm thấy danh mục với cateId tương ứng
     }
 }

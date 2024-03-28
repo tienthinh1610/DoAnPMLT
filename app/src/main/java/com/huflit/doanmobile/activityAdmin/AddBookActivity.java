@@ -21,7 +21,7 @@ public class AddBookActivity extends AppCompatActivity {
     Spinner spinner;
     Button btn_add;
     Toolbar toolbar;
-    private Mydatabase mydb;
+    //private Mydatabase mydb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +35,7 @@ public class AddBookActivity extends AppCompatActivity {
         etImage3 = findViewById(R.id.imgBook3);
         spinner = findViewById(R.id.spinner_category);
         btn_add = findViewById(R.id.btn_addbook);
-        mydb = new Mydatabase(this);
+        Mydatabase mydb = Mydatabase.getInstance(this);
 
 
         toolbar = findViewById(R.id.toolbaraddbook);
@@ -69,8 +69,9 @@ public class AddBookActivity extends AppCompatActivity {
                 }
                 else {
                     int price = Integer.parseInt(priceStr);
+                    //boolean add = mydb.addBookToCategory(categoryId,name);
                     boolean insertBook = mydb.addBook(categoryId, name, price, author, description, image1, image2, image3);
-                    if (insertBook = true)
+                    if (insertBook=true)
                     {
                         Toast.makeText(AddBookActivity.this, "Add Book successful", Toast.LENGTH_SHORT).show();
                         etName.setText("");

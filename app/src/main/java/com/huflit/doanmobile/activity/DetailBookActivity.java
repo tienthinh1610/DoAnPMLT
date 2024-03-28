@@ -26,7 +26,7 @@ public class DetailBookActivity extends AppCompatActivity {
     Toolbar toolbar;
     private  String musername;
     private int mbookid;
-    private Mydatabase mydb;
+    Mydatabase mydb = Mydatabase.getInstance(this);
     private  TextView namebook, pricebook, authorbook, describebook;
     ViewPager viewPager;
     Button btn_addtocart;

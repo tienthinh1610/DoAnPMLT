@@ -13,7 +13,7 @@ import com.huflit.doanmobile.R;
 import com.huflit.doanmobile.SqlHelper.Mydatabase;
 
 public class RegisterActivity extends AppCompatActivity {
-    public  static  Mydatabase mydb;
+    //public  static  Mydatabase mydb;
     EditText medt_username,medt_password;
     AppCompatButton mbtn_regis;
     @Override
@@ -23,7 +23,7 @@ public class RegisterActivity extends AppCompatActivity {
          medt_username = findViewById(R.id.edt_uesrname);
          medt_password = findViewById(R.id.edt_password);
          mbtn_regis = findViewById(R.id.btn_regis);
-        mydb = new Mydatabase(this);
+         Mydatabase mydb = Mydatabase.getInstance(this);
 
          mbtn_regis.setOnClickListener(new View.OnClickListener() {
              @Override

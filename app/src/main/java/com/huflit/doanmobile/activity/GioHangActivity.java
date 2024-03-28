@@ -28,7 +28,7 @@ public class GioHangActivity extends AppCompatActivity {
     private AdapterCart adapter;
     private List<Cart> cartList;
     private TextView totalTextView;
-    private Mydatabase mydb;
+    Mydatabase mydb = Mydatabase.getInstance(this);
     private String username;
     int userid;
     @Override
@@ -60,7 +60,7 @@ public class GioHangActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.rcv_cart);
         totalTextView = findViewById(R.id.tv_totalprice);
         toolbar = findViewById(R.id.toolbargiohang);
-        mydb = new Mydatabase(this);
+        mydb = Mydatabase.getInstance(this);
         cartList = new ArrayList<>();
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }

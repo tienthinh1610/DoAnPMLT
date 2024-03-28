@@ -1,8 +1,8 @@
 package com.huflit.doanmobile.classs;
 
-import java.util.ArrayList;
 
-public class Cart {
+
+public class Cart implements CartPrototype{
     private int cartId;
     private int userId;
     private Book book;
@@ -45,5 +45,12 @@ public class Cart {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    //Prototype
+    @Override
+    public Cart clone(int quantity) {
+        // Trả về một đối tượng Cart mới với quantity mới
+        return new Cart(this.cartId, this.userId, this.book, quantity);
     }
 }

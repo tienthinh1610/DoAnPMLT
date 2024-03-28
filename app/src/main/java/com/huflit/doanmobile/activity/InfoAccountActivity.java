@@ -21,7 +21,7 @@ public class InfoAccountActivity extends AppCompatActivity {
     EditText edt_hoten, edt_sdt, edt_email;
     AppCompatButton btn_updatein4;
     String username;
-    Mydatabase mydb;
+    Mydatabase mydb = Mydatabase.getInstance(this);
     Users user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

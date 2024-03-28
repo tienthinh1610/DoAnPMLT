@@ -29,7 +29,7 @@ public class InforOrder extends AppCompatActivity {
     Toolbar toolbar;
     private EditText edtHoTen, edtSDT, edtDiaChi;
     private RadioGroup rgPaymentMethor;
-    Mydatabase mydb;
+    Mydatabase mydb = Mydatabase.getInstance(this);
     String musername;
     int mtotalprice;
     @Override

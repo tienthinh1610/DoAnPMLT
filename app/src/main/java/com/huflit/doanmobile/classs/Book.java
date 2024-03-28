@@ -1,6 +1,6 @@
 package com.huflit.doanmobile.classs;
 
-public class Book {
+public class Book  implements Component {
     private int id;
     private int categoryId;
     private String name;
@@ -96,5 +96,10 @@ public class Book {
 
     public void setImage3(String image3) {
         this.image3 = image3;
+    }
+
+    @Override
+    public void displayInfo() {
+
     }
 }

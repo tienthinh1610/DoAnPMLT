@@ -100,6 +100,8 @@ public class AdapterBookList extends BaseAdapter {
             public void onClick(DialogInterface dialog, int which) {
                 Mydatabase mydb = new Mydatabase(context);
                 mydb.deleteBook(bookList.get(position).getId());
+                //composite
+                mydb.removeBookToCategory(bookList.get(position).getCategoryId(),bookList.get(position).getName());
                 bookList.remove(position);
                 notifyDataSetChanged();
                 Toast.makeText(context, "Xóa sách thành công!", Toast.LENGTH_SHORT).show();

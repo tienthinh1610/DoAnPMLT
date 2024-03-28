@@ -17,7 +17,7 @@ import java.util.List;
 public class HistoryOrderActivity extends AppCompatActivity {
 
     private ListView lvhistoryorder;
-    private Mydatabase mydb;
+    Mydatabase mydb = Mydatabase.getInstance(this);
     private List<HistoryOrder> orderList;
     private AdapterHistoryOrder adapter;
     String musername;

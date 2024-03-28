@@ -22,7 +22,7 @@ import java.util.List;
 public class CategoryListActivity extends AppCompatActivity {
     private  RecyclerView recyclerView;
     Toolbar toolbar;
-    Mydatabase mydb;
+    Mydatabase mydb = Mydatabase.getInstance(this);
     String musername;
     int mcategory;
     String mcategoryname;

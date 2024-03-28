@@ -26,7 +26,7 @@ public class SearchActivity extends AppCompatActivity {
 
     private AdapterRcvSearch adapter;
     private List<Book> bookList;
-    private Mydatabase mydb;
+    Mydatabase mydb = Mydatabase.getInstance(this);
     private SearchView searchView;
     private RecyclerView rcv_searchbooks;
     Toolbar toolbar;

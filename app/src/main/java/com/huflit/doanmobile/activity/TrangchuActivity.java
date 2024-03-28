@@ -65,6 +65,8 @@ public class TrangchuActivity extends AppCompatActivity {
         if (p != null){
             musername = p.getString("username");
         }
+        // Lấy thể hiện của MyDatabase thông qua Singleton
+        mydb = Mydatabase.getInstance(this);
         cateList = mydb.getAllCates();
         adapterLvNav = new AdapterLvNav(this,cateList, musername);
         lv_nav.setAdapter(adapterLvNav);
@@ -75,7 +77,8 @@ public class TrangchuActivity extends AppCompatActivity {
         toolbar_trangchu = (Toolbar) findViewById(R.id.toolbar_trangchu);
         nav_trangchu = (NavigationView) findViewById(R.id.nav_trangchu);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
-        mydb = new Mydatabase(this);
+        //singleton
+        mydb = Mydatabase.getInstance(this);
         lv_nav = findViewById(R.id.lv_nav);
         //Anh xa rcv
         recyclerViewCategory1 = findViewById(R.id.recyclerViewCategory1);

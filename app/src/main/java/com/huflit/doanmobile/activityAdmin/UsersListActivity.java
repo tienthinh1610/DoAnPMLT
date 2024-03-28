@@ -31,7 +31,7 @@ public class UsersListActivity extends AppCompatActivity {
     private ListView listView;
     private ArrayList<Users> mUserList;
     private AdapterUsersList adapter;
-    private Mydatabase mydb;
+    Mydatabase mydb = Mydatabase.getInstance(this);
     Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
